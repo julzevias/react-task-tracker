@@ -46,9 +46,9 @@ const AddTask = ({ onAdd }) => {
           placeholderText="Add Day"
           onChange={(date) => {
             setDay(date);
-            setParseDay(format(date, "dd/MM/yyyy"));
+            setParseDay(format(date, "MM/dd/yyyy"));
           }}
-          dateFormat="dd/MM/yyyy"
+          dateFormat="MM/dd/yyyy"
         />
       </div>
       <div className="form-control">
