@@ -18,10 +18,11 @@ const AddTask = ({ onAdd }) => {
       return;
     }
 
-    onAdd({ text, parseday, reminder });
+    onAdd({ text, parseday, time, reminder });
 
     setText("");
     setParseDay("");
+    setDay("");
     setTime("");
     setReminder(false);
   };
@@ -42,7 +43,7 @@ const AddTask = ({ onAdd }) => {
         <label>Day</label>
         <DatePicker
           selected={day}
-          placeholder="Add Day"
+          placeholderText="Add Day"
           onChange={(date) => {
             setDay(date);
             setParseDay(format(date, "dd/MM/yyyy"));
